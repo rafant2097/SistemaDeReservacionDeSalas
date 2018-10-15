@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>ConnectionMySQL</display-name>
+  
+  <servlet>
+    <servlet-name>sessionManager</servlet-name>
+    <servlet-class>controller.SessionManagerLogIn</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sessionManager</servlet-name>
+    <url-pattern>/sessionManager</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>sessionManagerLogOut</servlet-name>
+    <servlet-class>controller.SessionManagerLogOut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>sessionManagerLogOut</servlet-name>
+    <url-pattern>/sessionManagerLogOut</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>reservationComplete</servlet-name>
+    <servlet-class>controller.ReservationComplete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>reservationComplete</servlet-name>
+    <url-pattern>/reservationComplete</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
