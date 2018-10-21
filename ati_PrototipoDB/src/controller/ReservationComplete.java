@@ -113,9 +113,9 @@ public class ReservationComplete extends HttpServlet {
 		pList.add(DateTimeManager.fixHour(dateEnd));
 		pList.add(DateTimeManager.fixHour(dateStart));
 		pList.add(javaBean.getDescription());
-		pList.add("TEC Cartago, Cartago, CR");
-		pList.add("Reservación de Sala - ati");
-		pList.add("rafant2097@gmail.com");
+		pList.add("");
+		pList.add("");
+		pList.add("");
 		pList.add(javaBean.getConsumerEmail());
 		
 		return pList;
