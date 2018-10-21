@@ -39,6 +39,26 @@ public class DateTimeManager {
 		
 	}
 	
+	public static String fixHour(String pDate) {
+		
+		
+		int hour = Integer.parseInt(pDate.substring(11, 13));
+		hour += 6;
+		String inicio = pDate.substring(0,11);
+		
+		if(hour==25) {
+			hour=01;
+			inicio += "0";
+		}
+		else if(hour==26) {
+			hour=02;
+			inicio += "0";
+		}
+		return  inicio + hour + pDate.substring(13,pDate.length());
+		
+		
+	}
+	
 	public static boolean isBetween(String pDateStart, String pDateEnd, String pDateCompareStart, String pDateCompareEnd) {
 		
 		try {

@@ -3,7 +3,6 @@ package logicaDeNegocio;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.concurrent.ThreadLocalRandom;
 
 import logicaDeConexion.DB2Management;
 
@@ -167,39 +166,20 @@ public class ReservationManager{
 		
 		private String getParameters() {
 			
-			return "IdReservacion, CorreoSolicitante, FechaInicio, FechaFinalizacion,IdSala,Descripcion";
+			return "CorreoSolicitante, FechaInicio, FechaFinalizacion, IdSala, Descripcion";
 			
 		}
 		
 		private String createValues(JavaBeanReservation javaBean, RoomManager roomManager) {
 			
 			
-			return "'" + javaBean.getId() + "', '" + javaBean.getConsumerEmail() + "', '" + javaBean.getDateStart() 
+			return  "'" + javaBean.getConsumerEmail() + "', '" + javaBean.getDateStart() 
 			+ "', '" + javaBean.getDateFinish() + "','" + roomManager.getRoomData(javaBean.getRoomId()).getId() + "'"
 			+ ", '" + javaBean.getDescription() + "'";
 			
 			
 		}
 		
-		public String getNextId() {
-			
-			updateList();
-			
-			int newIdCounter = this.getReservationList().size()+1;
-			
-			String zeroToAdd;
-			
-			if(newIdCounter < 10)
-				zeroToAdd = "00";
-			else if(newIdCounter < 100)
-				zeroToAdd = "0";
-			else
-				zeroToAdd="";
-			
-			
-			return "ID_RES_" + zeroToAdd + newIdCounter;
-			
-		}
 		
 		public String getReservatedRoomData(String pRoomId) {
 			

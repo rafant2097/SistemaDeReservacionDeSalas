@@ -55,3 +55,15 @@ function showReservated4(){
 
 
 }
+
+function compare()
+{
+    let startDt = document.getElementById("startDate").value;
+    let endDt = document.getElementById("endDate").value;
+    
+    if(startDt > endDt)
+    {
+        alert("La hora inicial debe indicar un momento antes que la final");
+        document.getElementById("endDate").value="";
+    }
+}

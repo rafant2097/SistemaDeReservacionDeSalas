@@ -94,8 +94,8 @@ catch(Exception e){
 				</tr>
 				<tr><td> Email: </td><td><input required  type="text" name="pEmail" value=<%= session.getAttribute("correo") %>></tr>
 				<tr><td> Día: </td><td><input required  type="date" name="Date"></tr>
-				<tr><td> Hora de Inicio: </td><td><input required  type="time" name="StartTime"></tr>
-				<tr><td> Hora de Finalización: </td><td><input required  type="time" name="EndTime"></tr>
+				<tr><td> Hora de Inicio: </td><td><input required  type="time" name="StartTime" min="7:30" max="20:00" id="startDate"></tr>
+				<tr><td> Hora de Finalización: </td><td><input required min="7:30" max="20:00"  type="time" name="EndTime"  id="endDate" onblur="compare();"></tr>
 				<tr><td>Descripción: </td><td><textarea required  class="description" name="Description"></textarea></tr>
 			</table>
 		<input class="btn btn-primary" type="submit" value="Reservar">

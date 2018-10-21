@@ -76,7 +76,7 @@ public class DB2Management {
 	
 	/**
 	 * 
-	 * MÃ©todo para realizar la conexiÃ³n a la base de datos DB2
+	 * Método para realizar la conexión a la base de datos DB2
 	 * 
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
@@ -86,9 +86,9 @@ public class DB2Management {
 	private void addConnection() throws InstantiationException, IllegalAccessException, ClassNotFoundException, SQLException {
 		
 		if(connection==null) {
-			String url = "jurl";
-		    String userName = "user";
-		    String password = "password";
+			String url = "jdbc:db2://dashdb-txn-sbox-yp-dal09-03.services.dal.bluemix.net:50000/BLUDB";
+		    String userName = "mrc32751";
+		    String password = "477-g5rxpk80qkq3";
 		    
 		    connection = this.applyConnection( url, userName, password);
 	
@@ -99,9 +99,9 @@ public class DB2Management {
 	
 	/**
 	 * 
-	 * MÃ©todo para obtener los datos directamente de la base
-	 * de datos segÃºn la tabla del modelo ER requerida y
-	 * el atributo que determinarÃ¡ el orden descendente
+	 * Método para obtener los datos directamente de la base
+	 * de datos según la tabla del modelo ER requerida y
+	 * el atributo que determinará el orden descendente
 	 * 
 	 * @param pTableName
 	 * @return un conjunto con los datos almacenados en la base de datos
@@ -116,7 +116,7 @@ public class DB2Management {
 
 	/**
 	 * 
-	 * MÃ©todo para insentar datos en una tabla de la base de datos
+	 * Método para insentar datos en una tabla de la base de datos
 	 * 
 	 * @param pTableName
 	 * @param pParameters
@@ -135,8 +135,8 @@ public class DB2Management {
 	
 	/**
 	 * 
-	 * MÃ©todo para obtener los datos directamente de la base
-	 * de datos segÃºn la tabla del modelo ER requerida
+	 * Método para obtener los datos directamente de la base
+	 * de datos según la tabla del modelo ER requerida
 	 * 
 	 * @param pTableName
 	 * @return un conjunto con los datos almacenados en la base de datos
